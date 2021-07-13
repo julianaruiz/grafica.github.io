@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    text-decoration: none;
+    font-family: Helvetica, sans-serif;
+}
+
+main{
+    background: rgb(219, 219, 219);
+    width: 100%;
+    
+}
+
+.contenedor{
+    margin: auto;
+    width: 100%;
+    background: #fff;
+}
+
+.img-principal img{
+    width: 100%;
+    opacity: .9;
+    margin-bottom: 30px;
+}
+
+.contenedor-menu{
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    background: rgba(255, 255, 255, .65);
+    height: 90px;
+}
+
+.contenedor-btn{
+    align-self: center;
+    color: #fff;
+    display: none;
+}
+.btn-menu{
+    font-size: 35px;
+    padding: 0 20px;
+    cursor: pointer;
+}
+.logo{
+    height: 80px;
+    width: 150px;
+    padding: 10px;
+    margin: auto 0;
+}
+
+.enlaces{
+    padding:10px;
+    align-self: center;
+}
+.enlaces a:hover,
+.enlaces a.clic{
+    transition: ease all .6s;
+    background: rgb(191, 8, 17);
+    padding: 37px 12px;
+}
+.enlaces a{
+    padding: 35px 10px;
+    color: #000;
+    font-size: 16px;
+}
+
+@media screen and (max-width: 800px){
+    .contenedor-menu{
+        background: rgba(0, 0, 0, 0.671);
+    }
+    .menu{
+        justify-content: flex-start;
+        background: rgba(0, 0, 0, 0.671);
+    }
+    .contenedor-btn{
+        display: inline;
+    }
+    
+    .enlaces{
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        padding: 0;
+        text-align: center;
+        transition: all .4s;
+        top: -200vh;
+        display: flex;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.671);
+    }
+    .enlaces a,
+    .enlaces a.clic{
+        color: #fff;
+        font-size: 25px;
+        padding: 25px;
+    }
+    .enlaces.activo{
+        top: 90px;
+    }
+    enlaces a.clic{
+        background: rgb(51, 51, 51) !important;
+    }
+}

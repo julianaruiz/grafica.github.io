@@ -1,0 +1,151 @@
+.contactenos{
+    background: rgb(30,30,30);
+    color: rgb(240, 240, 240);
+    padding: 110px 0 30px 20px;
+    margin-bottom: 40px;
+}
+.whatsapp{
+    width: 60px;
+    border: 1px solid rgb(30,30,30);
+    border-radius: 10px;
+    position: fixed;
+    left: -10px;
+    background: rgb(191, 8, 17);
+}
+.whatsapp a{
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px 10px;
+}
+.whatsapp i{
+    font-size: 30px;
+    color: #fff;
+}
+.whatsapp:hover{
+    padding: 2px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
+}
+.metodos-contacto{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.contenedor-metodo{
+    border: 1px solid rgb(219, 219, 219);
+    padding: 20px;
+    border-radius: 4px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+.contenedor-metodo i{
+    padding-right: 20px;
+    font-size: 30px;
+    color: rgb(191, 8, 17);
+}
+.cuerpo-mensaje{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.contenedor-mensaje{
+    width: 50%;
+    display: grid;
+    grid-template-areas: "titulo titulo"
+                         "nombre email" 
+                         "tema tema"
+                         "mensaje mensaje"
+                         "enviar enviar";
+    row-gap: 20px;
+    column-gap: 15px;
+    max-width: 630px;
+}
+.titulo{
+    margin: 20px auto;
+    grid-area: titulo;
+}
+.contenedor-mensaje .nombre{
+    grid-area: nombre;
+}
+.contenedor-mensaje .email{
+    grid-area: email;
+}
+.contenedor-mensaje .tema{
+    grid-area: tema;
+}
+.contenedor-mensaje .mensaje{
+    grid-area: mensaje;
+    resize: none;
+}
+.contenedor-mensaje .btn-enviar{
+    grid-area: enviar;
+    padding: 8px;
+    background: rgb(191, 8, 17);
+    color: #fff;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.contenedor-mensaje .btn-enviar:hover{
+    background: rgba(191, 8, 17, 0.897);
+    padding: 8.3px;
+    transition: all .3s;
+}
+.contenedor-mensaje .datos{
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 3px;
+}
+.contenedor-mensaje .datos:focus{
+    border:3px solid rgb(191, 8, 17);
+    outline: 0 none;
+}
+.contenedor-horario{
+    width: 230px;
+    align-self: center;
+}
+.contenedor-horario h1{
+    padding: 10px 0;
+}
+.contenedor-horario h3{
+    padding: 2px 0;
+}
+.horario{
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 800px){
+    .cuerpo-mensaje{
+        display: block;
+    }
+    .titulo{
+        justify-content: center;
+    }
+    .contenedor-mensaje{
+        margin: auto;
+    }
+    .contenedor-horario{
+        margin: 30px auto;
+    }
+}
+@media screen and (max-width: 630px){
+    .contenedor-mensaje{
+        width: 70%;
+    }
+}
+@media screen and (max-width: 530px){
+    .contenedor-mensaje{
+        width: 90%;
+    }
+}
+@media screen and (max-width: 430px){
+    .contenedor-mensaje{
+        grid-template-areas: "titulo"
+                         "nombre" 
+                         "email"
+                         "tema"
+                         "mensaje"
+                         "enviar";
+    }
+}

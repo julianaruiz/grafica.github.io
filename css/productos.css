@@ -1,0 +1,17 @@
+.titulo-prod{
+    position: absolute;
+    padding: 0;
+    font-size: 40px;
+    margin: 0 auto;
+}
+
+.fila-prod{
+    width: 100%;
+    height: auto;
+}
+.contenedor-carruseles{
+    width: 100% !important;
+}
+.carousel-item img{
+    cursor: pointer;
+}

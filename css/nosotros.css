@@ -1,0 +1,42 @@
+.quienes-somos{
+    margin: 30px 0;
+    padding: 60px;
+    background: #000;
+    color: #fff;
+
+}
+h1, h3, p{
+    padding: 5px;
+}
+.que-hacemos{
+    margin: 30px 0;
+    padding: 60px;
+}
+.que-hacemos hr{
+    color: rgb(191, 8, 17);
+    border: 2px solid;
+    width: 20%;
+    margin: 0 0 10px;
+}
+.contenedor-eligenos{
+    padding: 60px;
+    background: rgb(0, 0, 0);
+}
+.eligenos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.motivo{
+    margin: 15px;
+    padding: 20px;
+    border: 3px solid rgb(191, 8, 17);
+    border-radius: 10%;
+    width: 240px;
+    text-align: center;
+    background: #fff;
+}
+.motivo i{
+    font-size: 25px;
+    padding-bottom: 15px;
+}

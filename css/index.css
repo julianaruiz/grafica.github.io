@@ -1,0 +1,137 @@
+
+.contenedor-servicios{
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contenedor-servicio{
+    width: 250px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.servicio{
+    width: 90%;
+    height: 90%;
+    margin: auto;
+    padding: 30px;
+    border: 1px solid rgb(219, 219, 219);
+    border-radius: 3px;
+    text-align: center;
+}
+
+.servicio i{
+    font-size: 50px;
+    padding: 20px 0;
+}
+.servicio h2{
+    padding: 10px 0;
+}
+.servicio p{
+    padding: 10px 0;
+}
+
+.contenedor-clientes{
+    width: 100%;
+}
+
+.titulo h3{
+    color: #000;
+    font-size: 30px;
+}
+
+.clientes .clientes-principal{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.clientes .clientes-principal .flecha-izquierda,
+.clientes .clientes-principal .flecha-derecha{
+    position: absolute;
+    background: transparent;
+    border: #000;
+    font-size: 40px;
+    height: 50%;
+    top: calc(50%-25%);
+    line-height: 40px;
+    width: 40px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 100;
+    transition: .2s ease all;
+}
+.clientes .clientes-principal .flecha-derecha{
+    right: 0;
+}
+.clientes .clientes-principal .flecha-izquierda{
+    left: 0;
+}
+.clientes .clientes-principal .flecha-izquierda:hover,
+.clientes .clientes-principal .flecha-derecha:hover{
+    background: rgba(0, 0, 0, .15);
+    border-radius: 3px;
+}
+.clientes .contenedor-carrusel{
+    width: 100%;
+    padding: 20px 0;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+.clientes .contenedor-carrusel .carrusel{
+    display: flex;
+    flex-wrap: nowrap;
+}
+.clientes .contenedor-carrusel .carrusel .cliente{
+    min-width: 20%;
+    transition: .3s ease all;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
+}
+.clientes .contenedor-carrusel .carrusel .cliente img{
+    width: 100%;
+    vertical-align: top;
+}
+
+.contenedor-nosotros{
+    padding: 10px;
+    margin-top: 40px;
+    text-align: center;
+}
+.contenedor-nosotros h1{
+    padding: 10px;
+    font-size: 40px;
+}
+.contenedor-nosotros hr{
+    width: 20%;
+    margin: auto;
+    border: 2px solid rgb(191,8,17);
+    border-radius: 5px;
+}
+.contenedor-nosotros p{
+    padding: 20px;
+}
+
+@media screen and (max-width: 650px) {
+    .contenedor-servicio{
+        padding: 10px;
+    }
+    .servicio{
+        width: 100%;
+        padding: 20px;
+    }
+    .servicio i{
+        font-size: 30px;
+        padding: 10px 0;
+    }
+    .servicio h2{
+        padding: 5px 0;
+    }
+    .servicio p{
+        padding: 5px 0;
+    }
+}
