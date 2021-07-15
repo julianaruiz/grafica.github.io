@@ -7,45 +7,25 @@
 }
 .contenedor-galeria{
     max-width: 90%;
-    margin: 20px auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    grid-template-rows: minmax(150px, auto);
+    padding: 20px;
+    gap: 10px;
+    grid-auto-flow: dense;
 }
-.contenedor-tarjeta{
-    margin: 5px;
-}
-.contenedor-tarjeta:hover figure{
-    -webkit-transform: perspective(600px) rotateY(180deg);
-    -ms-transform: perspective(600px) rotateY(180deg);
-    -o-transform: perspective(600px) rotateY(180deg);
-    transform: perspective(600px) rotateY(180deg);
-}
-figure{
-    width: 200px;
-    height: 250px;
-    margin: 0;
-    cursor: pointer;
-    position: relative;
-    transition: all ease .5s;
-    transform-style: preserve-3d;
-    transform: perspective(600px) rotateY(0deg);
-}
-figure .frontal,
-figure .trasera{
+.imagenes{
     width: 100%;
     height: 100%;
-    border-radius: 5px;
-    transition: all ease .5s;
+    object-fit: cover;
 }
-figure .frontal{
-    display: block;
-    backface-visibility: hidden;
-}
-figure .trasera{
-    position: absolute;
-    top: 0;
-    transform: perspective(600px) rotateY(180deg);
-    backface-visibility: hidden;
+
+@media screen and (min-width: 600px){
+    .ancho{
+        grid-column: span 2;
+    }
+    .alto{
+        grid-row: span 2;
+    }
 }
