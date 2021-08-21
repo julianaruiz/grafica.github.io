@@ -3,8 +3,7 @@
     display: flex;
     background: #000;
     height: 300px;
-    align-self: flex-end;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 .mapa iframe{
     height: 100%;
@@ -13,10 +12,22 @@
 .contenedor-informacion{
     padding: 20px;
     color: #fff;
-    display: flex; 
-    justify-content: space-around;
-    align-self: center;
-    flex-wrap: wrap;
+    display: grid; 
+    grid-template-areas: "contacto direccion redes"
+                         "copyright copyright copyright";
+    column-gap: 20px;
+}
+.contenedor-informacion .contacto{
+    grid-area: contacto;
+}
+.contenedor-informacion .direccion{
+    grid-area: direccion;
+}
+.contenedor-informacion .redes{
+    grid-area: redes;
+}
+.contenedor-informacion .copyright{
+    grid-area: copyright;
 }
 .informacion{
     padding: 20px;
@@ -28,7 +39,8 @@
     margin: 0; 
 }
 .contenedor-informacion .informacion .subtitulo{
-    font-size: 18.72px;
+    font-size: 16px;
+    line-height: 23px;
     margin: 0;
 }
 .contenedor-informacion i{
@@ -38,10 +50,9 @@
 }
 
 .copyright{
-    align-items: center;
+    text-align: center;
     font-size: 15px;
     padding: 10px;
-    display: flex;
 }
 
 @media screen and (max-width: 669px){
@@ -49,6 +60,13 @@
         flex-wrap: wrap;
         height: 560px;
         justify-content: center;
+    }
+    .contenedor-informacion{
+        grid-template-areas: "contacto"
+                             "direccion"
+                             "redes"
+                             "copyright";
+        text-align: center;
     }
     .mapa {
         width: 50%;

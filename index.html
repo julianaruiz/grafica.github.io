@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
     <link rel="icon" type="image/png" href="img/favicon.png">
     <title>Inicio</title>
 </head>
@@ -74,12 +76,11 @@
                 <div class="clientes">
                     <div class="titulo">
                         <h1>Nuestros clientes</h1>
+                        <hr>
                     </div>
                     <div class="clientes-principal">
-                        <button role="button" id="flecha-izquierda" class="flecha-izquierda"><i
-                            class="fas fa-chevron-left"></i></button>
                         <div class="contenedor-carrusel">
-                            <div class="carrusel">
+                            <div class="owl-carousel">
                                 <div class="cliente">
                                     <img src="img/logosEmpresas/arturoCalle.jpg" alt="">
                                 </div>
@@ -96,19 +97,10 @@
                                     <img src="img/logosEmpresas/espirit.jpg" alt="">
                                 </div>
                                 <div class="cliente">
-                                    <img src="img/logosEmpresas/grafiflex.jpg" alt="">
-                                </div>
-                                <div class="cliente">
                                     <img src="img/logosEmpresas/idunn.jpg" alt="">
                                 </div>
                                 <div class="cliente">
                                     <img src="img/logosEmpresas/imusa.jpg" alt="">
-                                </div>
-                                <div class="cliente">
-                                    <img src="img/logosEmpresas/lmar.jpg" alt="">
-                                </div>
-                                <div class="cliente">
-                                    <img src="img/logosEmpresas/losClasicos.jpg" alt="">
                                 </div>
                                 <div class="cliente">
                                     <img src="img/logosEmpresas/nafnaf.jpg" alt="">
@@ -120,37 +112,25 @@
                                     <img src="img/logosEmpresas/ondaDeMar.jpg" alt="">
                                 </div>
                                 <div class="cliente">
-                                    <img src="img/logosEmpresas/panzer.jpg" alt="">
-                                </div>
-                                <div class="cliente">
-                                    <img src="img/logosEmpresas/project.jpg" alt="">
-                                </div>
-                                <div class="cliente">
                                     <img src="img/logosEmpresas/rifle.jpg" alt="">
                                 </div>
                                 <div class="cliente">
                                     <img src="img/logosEmpresas/texproinn.jpg" alt="">
                                 </div>
                                 <div class="cliente">
-                                    <img src="img/logosEmpresas/turquesa.jpg" alt="">
-                                </div>
-                                <div class="cliente">
                                     <img src="img/logosEmpresas/vitalite.jpg" alt="">
                                 </div>
                             </div>
                         </div>
-                        <button role="button" id="flecha-derecha" class="flecha-derecha"><i
-                            class="fas fa-chevron-right"></i></button>
                     </div>
                 </div>
             </div>
 
             <div class="contenedor-nosotros">
                 <div class="nosotros">
-                    <h1>Nosotros</h1>
+                    <h1>Nuestros valores</h1>
                     <hr>
-                    <p>Nuestro equipo multidisciplinario cuenta con más de 20 años de experiencia en las 
-                        artes gráficas, lo que nos permite realizar el acompañamiento desde el inicio de la producción de sus ideas. </p>
+                    <img src="img/valores.gif" alt="valores empresariales" class="gif-valores">
                 </div>
             </div>
 
@@ -162,20 +142,17 @@
                 <div class="contenedor-informacion">
                     <div class="informacion">
                         <h2 class="titulo">Contáctenos</h2>
-                        <h3 class="subtitulo">+57 (4) 234 55 54 - 321 636 22 39</h3>
+                        <p class="subtitulo">+57 (4) 234 55 54 <br> +57 321 636 22 39</p>
                     </div>
                     <div class="informacion">
                         <h2 class="titulo">Dirección</h2>
-                        <h3 class="subtitulo">Carrera 50G # 1 sur - 27</h3>
-                        <h3 class="subtitulo">Medellín, Colombia</h3>
+                        <p class="subtitulo">Carrera 50G # 1 sur - 27</p>
+                        <p class="subtitulo">Medellín, Colombia</p>
                     </div>
                     <div class="informacion">
                         <h2 class="titulo">Síguenos</h2>
                         <a href="https://www.instagram.com/graficarttes/?hl=es-la" target="_blank">
                             <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://www.facebook.com/">
-                            <i class="fab fa-facebook-square"></i>
                         </a>
                     </div>
                     <div class="copyright">
@@ -186,8 +163,32 @@
         </div>
     </main>
     <script src="js/menu.js"></script>
-    <script src="js/index.js"></script>
     <script src="https://kit.fontawesome.com/b4d4ac8378.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="owlcarousel/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".owl-carousel").owlCarousel({
+                responsiveClass: true,
+                nav: false,
+                slideBy:'page',
+                responsive:{
+                    0:{
+                        items:2,
+                        loop: true
+                    },
+                    600:{
+                        items: 3,
+                        loop: true
+                    },
+                    1000:{
+                        items: 5,
+                        loop:false
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

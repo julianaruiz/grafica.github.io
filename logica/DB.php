@@ -9,9 +9,9 @@ class DB{
 
     public function __construct(){
         $this->host = "localhost";
-        $this->db = "grafica";
-        $this->user = "root";
-        $this->password = "";   
+        $this->db = "id17331860_grafica";
+        $this->user = "id17331860_root";
+        $this->password = "Valeoz-1001015552";   
     }
 
     public function connection(){

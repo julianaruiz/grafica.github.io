@@ -8,15 +8,25 @@
 h1, h3, p{
     padding: 5px;
 }
+.contenedor-mision{
+    display: flex;
+}
 .que-hacemos{
     margin: 30px 0;
     padding: 60px;
 }
-.que-hacemos hr{
+.contenedor-mision hr{
     color: rgb(191, 8, 17);
     border: 2px solid;
-    width: 20%;
-    margin: 0 0 10px;
+    width: 50%;
+    margin: 5px 0 10px;
+}
+.contenedor-video{
+    text-align: center;
+}
+.contenedor-video iframe{
+    width: 560px;
+    height: 315px;
 }
 .contenedor-eligenos{
     padding: 60px;
@@ -30,7 +40,6 @@ h1, h3, p{
 .motivo{
     margin: 15px;
     padding: 20px;
-    border: 3px solid rgb(191, 8, 17);
     border-radius: 10%;
     width: 240px;
     text-align: center;
@@ -39,4 +48,24 @@ h1, h3, p{
 .motivo i{
     font-size: 25px;
     padding-bottom: 15px;
+}
+@media screen and (max-width:930px){
+    .contenedor-mision{
+        flex-wrap: wrap;
+    }
+}
+@media screen and (max-width:650px){
+    h1{
+        font-size: 30px;
+        line-height: 30px;
+    }
+    .que-hacemos{
+        margin: 0;
+    }
+}
+@media screen and (max-width:570px){
+    .contenedor-video iframe{
+        width: 100%; 
+        height: 215px;
+    }
 }

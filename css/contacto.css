@@ -4,6 +4,12 @@
     padding: 110px 0 30px 20px;
     margin-bottom: 40px;
 }
+h1, h2{
+    padding: 10px 0;
+}
+h2{
+    text-align: center;
+}
 .whatsapp{
     width: 60px;
     border: 1px solid rgb(30,30,30);
@@ -103,12 +109,10 @@
 .contenedor-horario{
     width: 230px;
     align-self: center;
+    text-align: center;
 }
-.contenedor-horario h1{
-    padding: 10px 0;
-}
-.contenedor-horario h3{
-    padding: 2px 0;
+.contenedor-horario .horario p{
+    padding: 3px 0;
 }
 .horario{
     display: flex;
@@ -132,6 +136,12 @@
 @media screen and (max-width: 630px){
     .contenedor-mensaje{
         width: 70%;
+    }
+    h1{
+        font-size: 26px;
+    }
+    h2{
+        font-size: 20px;
     }
 }
 @media screen and (max-width: 530px){

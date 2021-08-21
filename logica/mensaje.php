@@ -20,3 +20,23 @@ echo mysqli_query($conexion, $cargar_mensaje);
 
 
 mysqli_close($conexion);
+
+/*
+if (isset($_POST['enviar'])){
+    if (!empty($_POST['nombre']) && !empty($_POST['email']) && !empty($_POST['tema']) && !empty($_POST['mensaje'])){
+        $name = $_POST['nombre'];
+        $emailUsuario = $_POST['email'];
+        $asunto = $_POST['tema'];
+        $mensaje = $_POST['mensaje'];
+        $email = "julianaruiz152@gmail.com";
+        $header = "From: ".$emailUsuario."\r\n";
+        $header.= "Reply-To: ".$email."\r\n";
+        $header.= "X-Mailer: PHP/".phpversion();
+        $mail = mail($email, $asunto, $mensaje, $header);
+
+    }
+}
+
+*/
+
+?>
